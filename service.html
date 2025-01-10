@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Services - Rocky.</title>
+  
+  <!-- googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    /* Custom Styles for the Service Page */
+    #services {
+      padding: 50px 0;
+    }
+
+    .service-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    .service-row {
+      height: auto; /* Changed from a fixed height to auto */
+      display: flex;
+      justify-content: space-between; /* Update to space-between for better flexibility */
+      align-items: center;
+      padding: 20px;
+      color: white;
+    }
+
+    .service-row:nth-child(odd) {
+      background-color: rgba(0, 15, 30, 0.8); /* Darker background for odd rows */
+    }
+
+    .service-row:nth-child(even) {
+      background-color: rgba(0, 30, 60, 0.8); /* Lighter background for even rows */
+    }
+
+    .service-image {
+      width: 100%; /* Full width for better responsiveness */
+      max-width: 150px; /* Max size for image */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .service-description {
+      max-width: 600px;
+      flex-grow: 1; /* Allow description to grow */
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #3FA2F6;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header section -->
+  <header id="header">
+    <div class="left-section">
+      <a class="logo" href="#">Rocky.</a>
+    </div>
+
+    <nav>
+      <a class="nav-item" href="index.html">Home</a>
+      <a class="nav-item active" href="service.html">My Service</a>
+      <a class="nav-item" href="about.html">About</a>
+      <a class="nav-item" href="contact.html">Contacts</a>
+    </nav>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>My Services</h2>
+    
+    <table class="service-table">
+      <tr class="service-row">
+        <td>
+          <img src="service1.jpg" alt="Service 1" class="service-image">
+        </td>
+        <td class="service-description">
+          <h3>IT Support</h3>
+          <p>Providing effective IT support services for businesses, from troubleshooting to system management.</p>
+        </td>
+      </tr>
+      <tr class="service-row">
+        <td>
+          <img src="service2.jpg" alt="Service 2" class="service-image">
+        </td>
+        <td class="service-description">
+          <h3>Network Solutions</h3>
+          <p>Designing and implementing robust network solutions to ensure smooth communication across your organization.</p>
+        </td>
+      </tr>
+      <tr class="service-row">
+        <td>
+          <img src="service3.jpg" alt="Service 3" class="service-image">
+        </td>
+        <td class="service-description">
+          <h3>Cybersecurity</h3>
+          <p>Implementing strong cybersecurity measures to protect your company from digital threats.</p>
+        </td>
+      </tr>
+      <tr class="service-row">
+        <td>
+          <img src="service4.jpg" alt="Service 4" class="service-image">
+        </td>
+        <td class="service-description">
+          <h3>IT Technician</h3>
+          <p>Providing expert technical support and maintenance for IT infrastructure to ensure seamless operations.</p>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+</body>
+
+</html>

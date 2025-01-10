@@ -1,0 +1,370 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(6, 7, 12);
+  font-family: 'Inter', sans-serif;
+  background-image: url(background-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 2rem; /* Change to a more responsive padding */
+}
+
+/* Header */
+#header, nav {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0; /* Add some vertical padding */
+}
+
+.nav-item {
+  font-size: 1rem; /* Make font size responsive */
+  font-weight: 500;
+  margin-left: 1.5rem; /* Responsive margin */
+  transition: color 0.12s, transform 0.12s;
+}
+
+nav .active {
+  color: #3FA2F6;
+}
+
+.nav-item:hover {
+  color: #3FA2F6;
+}
+
+.nav-item:active {
+  transform: scale(1.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem; /* Make font size responsive */
+  font-weight: 800;
+}
+
+/* Hero Section */
+#hero {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for small devices */
+  padding: 2rem; /* Responsive padding */
+}
+
+/* Left Section */
+.hero-left {
+  display: flex;
+  align-items: center;
+  padding-top: 20px; /* Adjust padding */
+}
+
+h1 {
+  font-size: 2.5rem; /* Responsive font size */
+  font-weight: 800;
+  padding: 1rem 0;
+}
+
+h3 {
+  font-size: 1.5rem; /* Responsive font size */
+  font-weight: 800;
+  color: #3FA2F6;
+  padding-bottom: 20px;
+}
+
+p {
+  font-size: 1rem; /* Responsive font size */
+  color: lightgray;
+  line-height: 1.5;
+  padding-bottom: 30px;
+}
+
+/* Button */
+.cta button {
+  color: black;
+  font-size: 1rem; /* Responsive font size */
+  font-weight: 600;
+  padding: 1rem 0;
+  width: 150px; /* Responsive width */
+  border:none;
+  border-radius: 8px;
+  margin-right: 1rem; /* Responsive margin */
+  background-color: #3FA2F6;
+  margin-bottom: 1rem; /* Ensure spacing for small devices */
+  transition: background-color 0.12s, border 0.12s, color 0.21s, padding 0.12s;
+}
+
+/* Button Hover States */
+.cta .cta-1:hover {
+  background-color: transparent;
+  color: #3FA2F6;
+  border: 2px solid #3FA2F6;
+  padding: 0.8rem 0;
+}
+
+.cta .cta-2:hover {
+  background-color: #3fa1f6;
+  color: #000000;
+}
+
+.cta .cta-2 {
+  background-color: transparent;
+  color: #3FA2F6;
+  border: 2px solid #3FA2F6;
+  padding: 0.8rem 0;
+}
+
+/* Icons */
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Responsive gap */
+}
+
+.social-icon {
+  padding-bottom: 30px; /* Responsive padding */
+}
+
+.social-icon i {
+  font-size: 1rem; /* Responsive font size */
+  color: #3FA2F6;
+  border: 1px solid #3FA2F6;
+  border-radius: 50px;
+  padding: 0.5rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s, box-shadow 0.12s;
+  cursor: pointer;
+}
+
+.social-icon i:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #3FA2F6;
+}
+
+/* Right Section */
+.hero-right {
+  transition: background-color 3s, box-shadow 3s;
+  cursor: pointer;
+}
+
+.hero-right:hover {
+  background-color: rgba(6, 7, 12, 0.705);
+  box-shadow: 
+    0 0 20px rgb(6, 7, 12),
+    0 0 50px rgb(6, 7, 12),
+    0 0 100px rgb(6, 7, 12),
+    0 0 200px rgb(6, 7, 12);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundZoom {
+  from {
+    background-size: 80%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+
+/* Apply Animations */
+h1, h3, p, button, .social-icon {
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+h1 {
+  animation-delay: 0.2s;
+}
+
+h3 {
+  animation-delay: 0.4s;
+}
+
+p {
+  animation-delay: 0.6s;
+}
+
+button {
+  animation-delay: 0.8s;
+}
+
+.social-icon {
+  animation-delay: 1s;
+}
+
+.nav-item,
+.left-section {
+  animation: fadeInTop 1s ease-in forwards;
+  opacity: 0;
+}
+
+body {
+  animation: backgroundZoom 3s ease-in forwards;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+  #hero {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+  }
+
+  h1 {
+    font-size: 4rem; /* Adjust for larger screens */
+  }
+
+  h3 {
+    font-size: 2.3rem; /* Adjust for larger screens */
+  }
+
+  p {
+    font-size: 1.2rem; /* Adjust for larger screens */
+  }
+
+  .cta button {
+    width: 200px; /* Adjust for larger screens */
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(6, 7, 12);
+  font-family: 'Inter', sans-serif;
+  background-image: url(background-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Header */
+#header, nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.nav-item {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1.5rem;
+  transition: color 0.12s, transform 0.12s;
+}
+
+nav .active {
+  color: #3FA2F6;
+}
+
+.nav-item:hover {
+  color: #3FA2F6;
+}
+
+.nav-item:active {
+  transform: scale(1.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* Hero Section */
+#hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-left {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.3rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.cta button {
+  width: auto;
+}
+
+.cta button:hover {
+  background-color: transparent;
+}
+
+.cta button:hover span {
+  color: #3FA2F6;
+}
+
+.social-icon {
+  display: flex;
+}
+
+.social-icon i {
+  font-size: 1rem;
+}
+
+/* About Me Section */
+#about-me {
+}
+
+h1 {
+}
+
+.p {
+}
+
+#contact {
+}

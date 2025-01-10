@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocky.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #contact-info {
+      display: none; /* Initially hidden */
+      padding: 20px;
+      color: white;
+      border: 1px solid #3FA2F6; /* Optional styling */
+      background-color: rgba(0, 0, 0, 0.7); /* Optional styling */
+      margin-top: 20px; /* Optional spacing */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header id="header">
+    <div class="left-section">
+      <a class="logo" href="#">Rocky.</a>
+    </div>
+
+    <nav>
+      <a class="nav-item active" href="index.html">Home</a>
+      <a class="nav-item" href="service.html">My Service</a>
+      <a class="nav-item" href="about.html">About</a>
+      <a class="nav-item" href="contact.html">Contacts</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="content">
+        <h1>Hi, I'm Rocky Licayan</h1>
+        <h3>IT Support Specialist cum IT Technician</h3>
+        <p>
+          I'm Rocky Licayan, an IT Support Specialist cum IT Technician dedicated to providing exceptional
+          technical assistance and solutions. With a focus on optimizing system performance, enhancing
+          user experiences, and leveraging the latest technologies, I empower businesses and individuals to
+          navigate their IT challenges seamlessly. Whether you need help troubleshooting issues, setting
+          up new systems, or implementing robust security measures, I’m here to ensure your technology
+          runs smoothly. Let’s enhance your IT environment together!
+        </p>
+
+        <div class="cta">
+          <button class="cta-1" id="hire-me-btn">Hire Me</button>
+          <a href="contact.html"> <button class="cta-2">Contact Me</button>
+        </div>
+
+        <div id="contact-info">
+          <p>Email: <a href="mailto:your-email@example.com" style="color: #3FA2F6;">licayanrocky@gmail.com</a></p>
+          <p>Mobile: <span style="color: #3FA2F6;">09487691620</span></p>
+        </div>
+
+        <div class="social-icon">
+          <a href="https://www.facebook.com/profile.php?id=61555844980443&mibextid=ZbWKwL"> <i class="fa-brands fa-facebook-f"></i>
+          <a href="https://www.linkedin.com/in/rocky-licayan-218705255"> <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right"></div>
+  </section>
+
+  <script>
+    document.getElementById('hire-me-btn').addEventListener('click', function() {
+        const contactInfo = document.getElementById('contact-info');
+        // Toggle display of the contact info
+        if (contactInfo.style.display === "none" || contactInfo.style.display === "") {
+            contactInfo.style.display = "block";
+        } else {
+            contactInfo.style.display = "none";
+        }
+    });
+  </script>
+</body>
+
+</html>
